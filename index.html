@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Norma & Huego</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .snap-container { scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll; scrollbar-width: none; }
+        .snap-container::-webkit-scrollbar { display: none; }
+        .snap-section { scroll-snap-align: start; height: 100vh; width: 100%; position: relative; }
+        .bg-fill { object-fit: cover; width: 100%; height: 100%; }
+        .gold-glass {
+            background: linear-gradient(135deg, rgba(182, 128, 25, 0.15), rgba(182, 128, 25, 0.25));
+            border: 1px solid rgba(182, 128, 25, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        .gold-circle { background-color: #b68019; border: 2px solid #b68019; }
+    </style>
+</head>
+<body class="bg-stone-900 text-stone-100">
+
+    <div class="snap-container">
+        
+        <section class="snap-section flex items-center justify-center relative">
+            <img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA.jpg" alt="Portada" class="bg-fill absolute inset-0">
+            
+            <div id="audio-container" class="absolute bottom-[6%] gold-glass px-6 py-4 rounded-full shadow-2xl flex items-center gap-4 transition-all hover:scale-105 border border-[#b68019]/40 w-[75%] max-w-sm z-20">
+                <button id="play-btn" class="w-10 h-10 rounded-full bg-white text-stone-900 flex items-center justify-center hover:bg-amber-100 transition-colors shadow-lg">
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-0.5" viewBox="0 0 20 20" fill="currentColor"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+                    <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V4z"/></svg>
+                </button>
+                <div class="flex flex-col flex-grow items-center">
+                    <span class="text-xs font-semibold text-white">Dale Play</span>
+                </div>
+                <audio id="bg-audio" loop>
+                    <source src="https://raw.githubusercontent.com/regina1503/nuestra-boda-karen-y-jesus/main/Kany%20Garc%C3%ADa%20-%20Mi%20Plan%20de%20Vida%20(con%20Abel%20Pintos%20-%20Official%20Video).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <section class="snap-section"><img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA1.jpg" alt="Foto 1" class="bg-fill"></section>
+        <section class="snap-section"><img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA3.jpg" alt="Foto 2" class="bg-fill"></section>
+        
+        <section class="snap-section flex items-center justify-center relative">
+            <img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA4.jpg" alt="Ubicación" class="bg-fill absolute inset-0">
+            <a href="https://www.google.com/maps/place/1344+S+Main+St,+Santa+Ana,+CA+92707,+EE.+UU./data=!4m2!3m1!1s0x80dcd918765daee1:0xb99766f602464655?sa=X&ved=1t:242&ictx=111" target="_blank" class="z-10 mt-[-10%] gold-glass px-4 py-2.5 rounded-full border border-[#b68019]/50 text-white font-semibold hover:bg-[#b68019]/20 transition-all flex items-center gap-2 text-xs w-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                Ver Ubicación
+            </a>
+            <a href="https://www.google.com/maps?q=Union+Hall+Salon+para+Eventos,+3904+W+1st+St+%23100,+Santa+Ana,+CA+92703,+Estados+Unidos&ftid=0x80dcd879ac0dde61:0x55e73ae799efb37&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813464,94286869,100820247&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAINeCAypTLDk0Mjk3Njk5LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDEwMDgxMzQ2NCw5NDI4Njg2OSwxMDA4MjAyNDdCAk1Y&skid=28a36932-e10a-4ec2-bb39-46af1c637672&g_st=iw" target="_blank" class="absolute bottom-[5%] z-10 gold-glass px-4 py-2.5 rounded-full border border-[#b68019]/50 text-white font-semibold hover:bg-[#b68019]/20 transition-all flex items-center gap-2 text-xs w-fit">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                Ver Ubicación
+            </a>
+        </section>
+
+        <section class="snap-section"><img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA11.jpg" alt="Foto 4" class="bg-fill"></section>
+        <section class="snap-section"><img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA13.jpg" alt="Foto 5" class="bg-fill"></section>
+
+        <section class="snap-section flex items-center justify-center relative">
+            <img src="https://raw.githubusercontent.com/regina1503/HUEGO-Y-NORMA-NUESTRA-BODA/main/NORMA14.jpg" alt="Cierre" class="bg-fill absolute inset-0">
+            <div id="countdown" class="flex gap-4 justify-center z-10 -mt-[50%] drop-shadow-lg">
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center gold-circle shadow-inner">
+                        <span id="days" class="text-sm font-bold text-white">0</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-widest text-[#b68019] mt-2 font-bold">Días</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center gold-circle shadow-inner">
+                        <span id="hours" class="text-sm font-bold text-white">0</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-widest text-[#b68019] mt-2 font-bold">Hrs</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center gold-circle shadow-inner">
+                        <span id="minutes" class="text-sm font-bold text-white">0</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-widest text-[#b68019] mt-2 font-bold">Min</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center gold-circle shadow-inner">
+                        <span id="seconds" class="text-sm font-bold text-white">0</span>
+                    </div>
+                    <span class="text-[8px] uppercase tracking-widest text-[#b68019] mt-2 font-bold">Seg</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const playBtn = document.getElementById('play-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                if (audio.currentTime < 8) audio.currentTime = 8;
+                audio.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                audio.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        });
+
+        const targetDate = new Date("August 14, 2026 00:00:00").getTime();
+        
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            if (diff <= 0) return;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
